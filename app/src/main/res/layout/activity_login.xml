@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/app_name"
+        app:srcCompat="@drawable/logo_pizza" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/loginPage"
+        android:textColor="#D02C1A"
+        android:layout_below="@id/imageView2"/>
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:autofillHints="username"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:background="@drawable/custom_shape_rectangle"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:inputType="text"
+        android:hint="@string/username"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_below="@id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:drawableStart="@drawable/baseline_person_24"/>
+
+    <EditText
+        android:id="@+id/editTextText4"
+        android:autofillHints="password"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:background="@drawable/custom_shape_rectangle"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:inputType="text"
+        android:hint="@string/password"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_below="@id/editTextText3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:drawableStart="@drawable/baseline_enhanced_encryption_24"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/login"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:backgroundTint="#D02C1A"
+        android:layout_below="@id/editTextText4"/>
+
+</RelativeLayout>
