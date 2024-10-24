@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,6 +37,22 @@ class MenuFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_menu, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        //add data to RecyclerView
+        val RVMenu: RecyclerView = view.findViewById(R.id.recyclerViewMenu)
+        RVMenu.layoutManager = GridLayoutManager(activity,2)
+        //list data menu
+        val menu = ArrayList<MenuModel>()
+        menu.add(MenuModel(R.drawable.logo_pizza, "Vegetables Pizza", "80.000"))
+        menu.add(MenuModel(R.drawable.logo_pizza, "Hawaian Pizza", "85.000"))
+        menu.add(MenuModel(R.drawable.logo_pizza, "American Pizza", "90.000"))
+        menu.add(MenuModel(R.drawable.logo_pizza, "Italian Pizza", "75.000"))
+        //set adapter
+        val adapterMenu = AdapterMenu(menu)
+        RVMenu.adapter = adapterMenu
     }
 
     companion object {
