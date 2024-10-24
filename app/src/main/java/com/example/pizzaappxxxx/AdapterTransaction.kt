@@ -39,7 +39,7 @@ class AdapterTransaction (private val listOrder:List<TransactionModel>): Recycle
         val modelTrx = listOrder[position]
         holder.imgFotoMenu.setImageResource(modelTrx.gambar)
         holder.textNamaMenu.text = modelTrx.namaMenu
-        holder.textHargaMenu.text = modelTrx.harga
+        holder.textHargaMenu.text = modelTrx.harga.toString()
         holder.textQty.text = modelTrx.qty.toString()
     }
 
